@@ -112,3 +112,10 @@ Route::post('/test', function(\Illuminate\Http\Request $request){
 })->middleware('ajax.auth');;
 
 
+/**
+ * SELLER
+ */
+
+//Products
+Route::resource('seller/products', 'Seller\ProductsController');
+Route::get('seller/products-api/', 'User\API\ProductsController@index');

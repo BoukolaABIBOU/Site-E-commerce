@@ -52,8 +52,8 @@ class ProductsController extends AbstractSellerController
      */
     public function index()
     {
-        return view('admin.index', [
-            'table' => 'admin._includes._tables._products'
+        return view('seller.index', [
+            'table' => 'seller._includes._tables._products'
         ]);
     }
 

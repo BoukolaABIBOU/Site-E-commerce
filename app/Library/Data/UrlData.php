@@ -30,7 +30,8 @@ class UrlData
             'shopping_cart_update' => action('User\API\ShoppingCartController@update'),
             'category_url' => action('User\SearchController@category', ['category' => null]),
             'user_email_url' => action('Auth\RegisterValidationController@email'),
-            'user_username_url' => action('Auth\RegisterValidationController@username')
+            'user_username_url' => action('Auth\RegisterValidationController@username'),
+            'product_api_url' => action('User\API\ProductsController@index'),
         ];
     }
 }

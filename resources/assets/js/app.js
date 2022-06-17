@@ -28,6 +28,13 @@ Vue.use(VeeValidate);
 Vue.component('main-page', require('./components/main-page.vue'));
 Vue.component('main-shopping-cart', require('./components/main-shopping-cart.vue'))
 
+// Products
+Vue.component('product-table', require('./components/seller/products/product-table.vue'));
+Vue.component('product-row', require('./components/seller/products/product-row.vue'));
+Vue.component('delete-product-form', require('./components/seller/products/delete-product-form.vue'));
+Vue.component('product-form', require('./components/seller/products/product-form.vue'));
+Vue.component('view-product', require('./components/seller/products/view-product.vue'));
+
 
 //Auth Pages
 Vue.component('registration-form', require('./components/auth/registration-form.vue'));

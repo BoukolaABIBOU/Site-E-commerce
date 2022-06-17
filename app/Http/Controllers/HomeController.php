@@ -87,6 +87,6 @@ class HomeController extends Controller
      */
     public function seller()
     {
-        return view('ecommerce.seller');
+        return view('seller.home');
     }
 }
