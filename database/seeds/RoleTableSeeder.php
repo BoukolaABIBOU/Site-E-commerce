@@ -1,6 +1,7 @@
 <?php
 
 use App\Role;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class RoleTableSeeder extends Seeder
@@ -15,6 +16,8 @@ class RoleTableSeeder extends Seeder
         $admin = Role::create([
             'name' => 'admin'
         ]);
+        $adminUser = User::find(1);
+        $adminUser->assignRole($admin);
     }
 
   /*
