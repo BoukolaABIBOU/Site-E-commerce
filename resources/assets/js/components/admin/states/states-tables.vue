@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="pull-right">
-            <button class="btn btn-primary" @click="show.form = true">Create State</button>
+            <button class="btn btn-primary" @click="show.form = true">Créer un état</button>
         </div><!-- /.pull-right -->
         <full-screen v-if="show.form" :close="closeForm">
             <h3 slot="header">{{ form.header }}</h3>
@@ -17,10 +17,10 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Name</th>
+                <th>Nom</th>
                 <th>Abbreviation</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Editer</th>
+                <th>Supprimer</th>
             </tr>
             </thead>
 
@@ -52,7 +52,7 @@
                 lastPage : null,
                 states : null,
                 form : {
-                    header : 'Add a State',
+                    header : 'Ajouter une état',
                     isEdit : false,
                     state : null
                 },
@@ -116,7 +116,7 @@
              */
             closeForm() {
                 this.show.form = false;
-                this.form.header = 'Add a Tax';
+                this.form.header = 'Ajouter une taxe';
                 this.form.isEdit = false;
                 this.form.state = null;
             },
@@ -129,7 +129,7 @@
             onEdit(state) {
                 this.form.state = state;
                 this.form.isEdit = true;
-                this.form.header = 'Edit this State';
+                this.form.header = 'Editer un état';
                 this.show.form = true;
             }
         }

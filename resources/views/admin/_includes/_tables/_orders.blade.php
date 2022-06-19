@@ -1,14 +1,14 @@
 <div class="page-header">
-    <h1>Orders Page</h1>
+    <h1>Page Commandes</h1>
 </div>
 <table class="table">
     <thead>
     <tr>
-        <th>Order ID</th>
-        <th>User</th>
+        <th>Commande ID</th>
+        <th>Utilisateur</th>
         <th>Total</th>
-        <th>Items Ordered</th>
-        <th>View</th>
+        <th>Livres Commander</th>
+        <th>Voir</th>
     </tr>
     </thead>
     <tbody>

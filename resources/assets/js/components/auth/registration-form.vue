@@ -5,7 +5,7 @@
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('first_name')}">
                     <label for="first_name" class="control-label">
-                        First Name
+                        Nom
                     </label>
                     <input id="first_name"
                            type="text"
@@ -22,7 +22,7 @@
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('last_name')}">
                     <label for="last_name" class="control-label">
-                        Last Name
+                        Prénom
                     </label>
                     <input id="last_name"
                            type="text"
@@ -41,7 +41,7 @@
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('username')}">
                     <label for="username" class=" control-label">
-                        Username
+                        Nom de l'utilisateur
                     </label>
                     <input id="username"
                            type="text"
@@ -56,7 +56,7 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('email')}">
-                    <label for="email" class="control-label">E-Mail Address</label>
+                    <label for="email" class="control-label">Email</label>
                     <input id="email"
                            type="email"
                            class="form-control"
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('password')}">
-                    <label for="password" class="control-label">Password</label>
+                    <label for="password" class="control-label">Mot de passe</label>
                     <input id="password"
                            type="password"
                            class="form-control"
@@ -85,7 +85,7 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <div :class="{'form-group' : true, 'has-error' : errors.has('password_confirmation')}">
-                    <label for="password-confirm" class="control-label">Confirm Password</label>
+                    <label for="password-confirm" class="control-label">Confirmer le mot de passe</label>
                     <input id="password-confirm"
                            type="password"
                            class="form-control"
@@ -97,7 +97,7 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    Register
+                    S'inscrire
                 </button>
             </div>
         </div><!-- form-group -->
@@ -113,7 +113,7 @@
         },
 
         getMessage() {
-            return `This email address is already registered.`
+            return `Cette adresse e-mail est déjà enregistrée.`
         },
         validate(value, args) {
             if(value)
@@ -141,7 +141,7 @@
         },
 
         getMessage() {
-            return `This username is already taken!`
+            return `Ce nom d’utilisateur est déjà pris!`
         },
         validate(value, args) {
             if(value)

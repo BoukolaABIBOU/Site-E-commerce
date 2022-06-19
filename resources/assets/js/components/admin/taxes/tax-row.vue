@@ -3,7 +3,7 @@
         <td class="table-element">{{ tax.name }}</td>
         <td class="table-element">{{ tax.percent }}</td>
         <td>
-            <button class="btn btn-primary" @click="editTax(tax)">Edit Tax</button>
+            <button class="btn btn-primary" @click="editTax(tax)">Editer une taxe</button>
         </td>
         <td>
             <delete-tax-button :tax="tax"

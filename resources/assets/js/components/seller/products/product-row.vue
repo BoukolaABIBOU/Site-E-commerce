@@ -17,7 +17,7 @@
         <td>
             <span v-if="onSale">
                 <full-screen v-if="show.saleDetails" @close="toggleSale">
-                    <h3 slot="header">Sales Details</h3>
+                    <h3 slot="header">Détails des ventes</h3>
                     <div slot="body">
                         <view-sale-details :sale-id="product.sales[0].id" :cancel="toggleSale">
 
@@ -25,10 +25,10 @@
                     </div>
                 </full-screen>
 
-                <button class="btn btn-success" @click="toggleSale">View Sale</button>
+                <button class="btn btn-success" @click="toggleSale">Voir vente</button>
             </span>
             <span class="text-danger table-element" v-else>
-                No Sale
+                Pas de vente
             </span>
         </td>
         <td>
@@ -48,7 +48,7 @@
             </full-screen>
         </td>
         <td>
-            <button class="btn btn-primary" @click="onEdit(product)">Edit Product</button>
+            <button class="btn btn-primary" @click="onEdit(product)">Modifier le produit</button>
         </td>
         <td>
             <delete-product-form :post_url="urls.delete"
@@ -76,10 +76,10 @@
                 },
                 slider : {
                     header : {
-                        sale : 'Add a Sale'
+                        sale : 'Ajouter une vente'
                     },
                     button : {
-                        saleForm : 'Add Sale'
+                        saleForm : 'Ajouter une vente'
                     },
                 }
             }

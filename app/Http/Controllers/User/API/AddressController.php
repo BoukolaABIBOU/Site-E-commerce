@@ -53,11 +53,11 @@ class AddressController extends AbstractUserAPIController
         try{
             $request->createAddress(new Address());
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an error creating your new address.  Please try again',
+            return $this->hasError('Désolé, il y a eu une erreur lors de la création de votre nouvelle adresse. Veuillez réessayer.',
                 422);
         }
 
-        return $this->success('You have added an address!');
+        return $this->success('Vous avez ajouté une adresse!');
     }
 
     /**
@@ -78,7 +78,7 @@ class AddressController extends AbstractUserAPIController
         try{
             $message = $request->updateAddress($address);
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an error updating your new address.  Please try again',
+            return $this->hasError('Désolé, il y a eu une erreur dans la mise à jour de votre nouvelle adresse. Veuillez réessayer.',
                 422);
         }
         return $this->success($message);
@@ -102,10 +102,10 @@ class AddressController extends AbstractUserAPIController
         try{
             $address->delete();
         } catch(\Exception $exception) {
-            return $this->hasError('Sorry there was an error deleting your new address.  Please try again',
+            return $this->hasError('Désolé, il y a eu une erreur lors de la suppression de votre nouvelle adresse. Veuillez réessayer.',
                 422);
         }
-        return $this->success('You deleted an address!');
+        return $this->success('Vous avez supprimé une adresse!');
     }
 
     /**

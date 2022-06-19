@@ -4,11 +4,11 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Order Date</th>
-                        <th>Shipped</th>
-                        <th>Ship Date</th>
+                        <th>Date Commande</th>
+                        <th>Expédition</th>
+                        <th>Date d'expédition</th>
                         <th>Total</th>
-                        <th>View Order</th>
+                        <th>Voir l'ordre</th>
                     </tr>
                 </thead>
                 <tbody>

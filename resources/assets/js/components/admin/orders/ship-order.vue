@@ -1,28 +1,28 @@
 <template>
     <div class="well">
-        <h3>Shipping Details</h3>
+        <h3>Informations de livraison</h3>
         <p>
             <strong :class="{'text-success' : order.paid_for, 'text-danger' : !order.paid_for}" >Paid:
-                <span v-if="order.paid_for">Yes</span>
-                <span v-else>No</span>
+                <span v-if="order.paid_for">Oui</span>
+                <span v-else>Non</span>
             </strong>
         </p>
         <div v-if="order.shipped">
             <p>
                 <strong :class="{'text-success' : order.shipped, 'text-danger' : !order.shipped}">Shipped:
-                    <span v-if="order.shipped">Yes</span>
-                    <span v-else>No</span>
+                    <span v-if="order.shipped">Oui</span>
+                    <span v-else>Non</span>
                 </strong>
             </p>
             <p>
-                <strong v-if="order.shipped">Ship Date: {{ order.ship_date }}</strong>
+                <strong v-if="order.shipped">Date d'expédition: {{ order.ship_date }}</strong>
             </p>
         </div>
         <div>
-            <button v-if="order.paid_for && !order.shipped" class="btn btn-primary" @click="open">Shipped</button>
+            <button v-if="order.paid_for && !order.shipped" class="btn btn-primary" @click="open">Expédié</button>
             <form-modal v-if="showForm"
                         @cancel-modal-form="close()">
-                <h3 slot="header">Ship Order</h3>
+                <h3 slot="header">Commande d’expédition</h3>
                 <div slot="body">
                     <form @submit.prevent="beforeSubmit">
                         <div class="row">
@@ -45,7 +45,7 @@
                         </div><!-- /.row -->
                         <div class="row">
                             <div class="pull-right">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary">Soumettre</button>
                             </div><!-- /.pull-right -->
                         </div><!-- /.row -->
                     </form>

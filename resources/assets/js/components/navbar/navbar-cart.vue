@@ -38,8 +38,8 @@
                 <hr>
             </li>
             <li class="dropdown-button">
-                <a class="btn btn-success" :href="order_url + '/select-address'">Check Out</a>
-                <a class="btn btn-primary pull-right" :href="order_url + '/edit-order'">Edit Order</a>
+                <a class="btn btn-success" :href="order_url + '/select-address'">Vérifier</a>
+                <a class="btn btn-primary pull-right" :href="order_url + '/edit-order'"> Valider la commande</a>
             </li>
         </ul>
     </li>
@@ -73,13 +73,13 @@
                     count = this.cart.products.length;
                 }
                 if(count === 0) {
-                    return "Empty";
+                    return "Panier";
                 }
                 if(count === 1) {
-                    return "1 Item";
+                    return "1 Livre";
                 }
                 if(count > 1) {
-                    return count + " Items";
+                    return count + " Livres";
                 }
             },
 
@@ -96,11 +96,11 @@
              * @return {string}
              */
             getTotalMessage() {
-                let message = this.cart.information.count + ' Item';
+                let message = this.cart.information.count + 'Livre';
                 if(this.cart.information.count != 1) {
                     message += 's';
                 }
-                message += ' with total of $' + this.cart.information.total;
+                message += ' with total of ' + this.cart.information.total + ' fcfa';
                 return message;
             },
 

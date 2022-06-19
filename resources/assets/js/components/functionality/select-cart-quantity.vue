@@ -1,6 +1,6 @@
 <template>
     <div>
-        <label for="quantity" v-show="showLabel">Quantity: </label>
+        <label for="quantity" v-show="showLabel">Quantité: </label>
         <select id="quantity" v-on:change="updateQuantity">
             <option v-for="quantity in quantities"
                     :selected="current == quantity ? 'selected' : ''"

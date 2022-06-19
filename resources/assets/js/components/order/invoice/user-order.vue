@@ -7,7 +7,7 @@
         <user-order-header :order="order">
 
         </user-order-header>
-        <h3>Your Order</h3>
+        <h3>Votre commande</h3>
         <ul class="list-group">
             <user-order-item v-for="product in order.products"
                              :key="product.id"

@@ -71,7 +71,7 @@ class AddressErrorTracker extends AbstractErrorTracker
         if(!$this->model->hasResult())
         {
             $this->responseTracker->setResult(422,
-                "Error: there is no address in your account that matches the one you provided!",
+                "Erreur : il n’y a aucune adresse dans votre compte qui correspond à celle que vous avez fournie!",
                 true);
         }
     }

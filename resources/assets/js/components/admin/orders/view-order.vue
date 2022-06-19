@@ -2,7 +2,7 @@
     <div v-if="order">
         <div class="panel panel-default">
             <div class="panel-heading">
-                Payment Details
+                Détails de paiement
             </div><!-- /.panel-heading -->
             <div class="panel-body">
                 <div class="row">
@@ -28,7 +28,7 @@
                            :user="order.user" :order="order">
 
         </user-order-header>
-        <h3>Your Order</h3>
+        <h3>Votre commande</h3>
         <ul class="list-group">
             <user-order-item v-for="product in order.products"
                              :key="product.id"

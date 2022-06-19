@@ -52,12 +52,12 @@ class NavBarServiceProvider extends ServiceProvider
     {
         if($number === 0)
         {
-            return 'Empty Cart';
+            return 'Vider le panier';
         }
         if($number === 1)
         {
-            return '(1) item';
+            return '(1) Livre';
         }
-        return "($number) items";
+        return "($number) Livres";
     }
 }

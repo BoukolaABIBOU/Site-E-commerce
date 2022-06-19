@@ -5,7 +5,7 @@
         </div><!-- /.panel-heading -->
         <div class="panel-body">
             <button class="btn btn-success" @click="beforeSubmit">
-                Credit Card  <i class="fa fa-credit-card" aria-hidden="true"></i>
+                Carte de crédit  <i class="fa fa-credit-card" aria-hidden="true"></i>
             </button>
             <hr>
             <button id="pay-btn"

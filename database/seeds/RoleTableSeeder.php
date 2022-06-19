@@ -20,18 +20,5 @@ class RoleTableSeeder extends Seeder
         $adminUser->assignRole($admin);
     }
 
-  /*
-    public function ron()
-    {
-        $seller = Role::create([
-            'name' => 'seller'
-        ]);
-    }
-
-    public function ran()
-    {
-        $buyer = Role::create([
-            'name' => 'buyer'
-        ]);
-    }*/
+ 
 }

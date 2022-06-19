@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3>User's Details</h3>
+            <h3>Données de l'utilisateur</h3>
         </div><!-- /.panel-heading -->
         <div class="panel-body">
             <div class="row">
@@ -50,7 +50,7 @@
              * @return void
              */
             updateError(){
-                Event.$emit('update-user-error', 'An error retrieving your user account information, please try again!');
+                Event.$emit('update-user-error', 'Une erreur de récupération des informations de votre compte utilisateur, veuillez réessayer!');
             }
         },
     }

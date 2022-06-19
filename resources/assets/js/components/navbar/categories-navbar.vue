@@ -1,7 +1,7 @@
 <template>
     <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-            Categories<span class="caret"></span>
+            Catégories<span class="caret"></span>
         </a>
         <ul class="dropdown-menu" id="navbar-category">
             <li v-for="category in categories">

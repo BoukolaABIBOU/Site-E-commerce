@@ -1,7 +1,7 @@
 <template>
     <form @submit.prevent="beforeSubmit">
         <div :class="{'form-group': true, 'has-error' : errors.has('category_name')}">
-            <label :for="categoryID" class="control-label">Name: </label>
+            <label :for="categoryID" class="control-label">Nom: </label>
             <input class="form-control"
                    type="text"
                    v-validate="'required|alpha_spaces'"
@@ -28,7 +28,7 @@
                 },
                 categoryID : 'category_name',
                 isEdit : false,
-                submitButtonMessage : 'Add'
+                submitButtonMessage : 'Ajouter'
             }
         },
 
@@ -37,7 +37,7 @@
                 this.category.name = this.currentCategory.name;
                 this.category._method = 'PATCH';
                 this.isEdit = true;
-                this.submitButtonMessage = 'Edit'
+                this.submitButtonMessage = 'Editer'
                 this.categoryID = this.categoryID + '_' + this.currentCategory.name;
             }
 
@@ -94,7 +94,7 @@
              * @return void
              */
             updateError(){
-                Event.$emit('update-user-error', 'An error has occurred please try again!');
+                Event.$emit('update-user-error', 'Une erreur s’est produite, veuillez réessayer!');
                 this.showButton = true;
             }
 

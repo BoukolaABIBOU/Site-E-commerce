@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <div class="alert alert-danger">
-                    <strong>Error!</strong> {{ errorMessage }}
+                    <strong>Erreur!</strong> {{ errorMessage }}
                 </div>
             </div><!-- /.col -->
         </div><!-- /.row -->

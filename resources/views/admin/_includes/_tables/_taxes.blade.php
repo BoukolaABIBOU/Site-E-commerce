@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>Taxes Page</h1>
+    <h1>Page Taxes</h1>
 </div>
 <tax-table>
 

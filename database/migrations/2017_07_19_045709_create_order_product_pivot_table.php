@@ -29,6 +29,8 @@ class CreateOrderProductPivotTable extends Migration
                 ->on('products')
                 ->onDelete('cascade');
             $table->integer('quantity');
+
+            
         });
     }
 

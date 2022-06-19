@@ -18,7 +18,7 @@ class RedirectIfNotAdmin
         if(!$request->user()->hasRole('admin'))
         {
             if($request->ajax()) {
-                return response('Unauthorized', 401);
+                return response('Non autorisé', 401);
             }
             return redirect('/');
 

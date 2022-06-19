@@ -73,7 +73,7 @@ class OrderErrorTracker extends AbstractErrorTracker
         if((int)$this->address->user_id !== (int)$this->user->id)
         {
             $this->responseTracker->setResult(422,
-                "Error: we are unable to process your request",
+                "Erreur : nous ne sommes pas en mesure de traiter votre demande",
                 true);
         }
     }
@@ -88,7 +88,7 @@ class OrderErrorTracker extends AbstractErrorTracker
         if((int)$this->model->user_id !== (int)$this->user->id)
         {
             $this->responseTracker->setResult(403,
-                "Error: we are unable to process your request",
+                "Erreur : nous ne sommes pas en mesure de traiter votre demande",
                 true);
         }
     }

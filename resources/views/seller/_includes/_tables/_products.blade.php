@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>Products Page</h1>
+    <h1>Page Produits</h1>
 </div>
 <product-table>
 

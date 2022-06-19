@@ -3,7 +3,7 @@
 |--------------------------------------------------------------------------
 | AbstractTransformer.php
 |--------------------------------------------------------------------------
-| Created by Shawn Legge
+| 
 | This class is responsible for receiving a model and returning an array.
 | The purpose of a transformer is to separate the database query from the
 | the results returned from a database query

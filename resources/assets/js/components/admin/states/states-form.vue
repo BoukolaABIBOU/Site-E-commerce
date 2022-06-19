@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div :class="{'form-group': true, 'has-error' : errors.has('state-name')}">
-                    <label for="state-name" class="control-label">Name: </label>
+                    <label for="state-name" class="control-label">Nom: </label>
                     <input class="form-control"
                            type="text"
                            name="state-name"
@@ -18,7 +18,7 @@
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <div :class="{'form-group': true, 'has-error' : errors.has('abbreviation')}">
-                    <label>Percent </label>
+                    <label>Pourcent </label>
                     <input class="form-control"
                            type="text"
                            name="abbreviation"
@@ -34,10 +34,10 @@
         </div><!-- /.row -->
         <div class="row">
             <div class="pull-left">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
             </div><!-- /.pull-left -->
             <div class="pull-right">
-                <button type="button" class="btn btn-danger" @click="close">Cancel</button>
+                <button type="button" class="btn btn-danger" @click="close">Annuler</button>
             </div><!-- /.pull-right -->
         </div><!-- /.row -->
     </form>

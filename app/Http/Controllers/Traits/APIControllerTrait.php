@@ -34,7 +34,7 @@ trait APIControllerTrait
      */
     protected function processingError()
     {
-        return $this->hasError('Sorry there was an error processing your.  Please try again',
+        return $this->hasError('Désolé, il y a eu une erreur de traitement. Veuillez réessayer.',
             422);
     }
 

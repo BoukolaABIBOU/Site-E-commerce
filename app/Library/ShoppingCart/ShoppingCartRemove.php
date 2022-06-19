@@ -31,6 +31,6 @@ class ShoppingCartRemove extends AbstractShoppingCart
      */
     protected function setResult()
     {
-        $this->result = "You removed the {$this->item->name} from your shopping cart";
+        $this->result = "Vous avez retiré le {$this->item->name} de votre panier";
     }
 }

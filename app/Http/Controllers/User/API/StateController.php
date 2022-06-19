@@ -18,7 +18,7 @@ class StateController extends AbstractUserAPIController
         try {
             $states = State::all()->pluck('name', 'id')->toArray();
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an issue processing your request', 422);
+            return $this->hasError('Désolé pour le problème de traitement de votre demande', 422);
         }
 
         return response()->json([

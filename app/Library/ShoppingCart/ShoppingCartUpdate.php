@@ -30,6 +30,6 @@ class ShoppingCartUpdate extends AbstractShoppingCart
      */
     protected function setResult()
     {
-        $this->result = "You have updated the quantity of {$this->product->title} to {$this->quantity}";
+        $this->result = "Vous avez mis à jour la quantité de {$this->product->title} à {$this->quantity}";
     }
 }

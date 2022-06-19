@@ -1,7 +1,7 @@
 <template>
     <div v-if="products">
         <div class="pull-right">
-            <button class="btn btn-primary" @click="show.form = true">Create New Product</button>
+            <button class="btn btn-primary" @click="show.form = true">Créer un nouveau produit</button>
         </div><!-- /.row -->
         <full-screen v-if="show.form" :close="close">
             <h3 slot="header">{{ form.header }}</h3>
@@ -16,13 +16,13 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Title</th>
-                <th>Category</th>
-                <th>Price</th>
-                <th>On Sale</th>
-                <th>Edit Sale</th>
-                <th>Update Product</th>
-                <th>Delete Product</th>
+                <th>Titre</th>
+                <th>Catégorie</th>
+                <th>Prix</th>
+                <th>En vente</th>
+                <th>Editer la vente</th>
+                <th>Mise à jour du produit</th>
+                <th>Supprimer le produit</th>
             </tr>
             </thead>
             <tbody>

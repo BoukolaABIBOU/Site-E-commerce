@@ -3,7 +3,7 @@
 |--------------------------------------------------------------------------
 | AddressTransformer.php
 |--------------------------------------------------------------------------
-| Created by Shawn Legge
+| 
 | This class is responsible for receiving an addresses and returning an
 | array including the street address, city, state, and postal code
 */

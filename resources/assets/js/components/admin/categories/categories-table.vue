@@ -2,9 +2,9 @@
     <table class="table">
         <thead>
         <tr>
-            <th>Name</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Nom</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
         </tr>
         </thead>
 

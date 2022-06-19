@@ -11,7 +11,7 @@
             <p>{{ $product->description }}</p>
         </div><!-- /.caption-full-->
         <div class="ratings">
-            <p class="pull-right">{{ $product->reviews()->count() }} reviews</p>
+            <p class="pull-right">{{ $product->reviews()->count() }} Commentaires</p>
             <p>
                 <review-stars :stars="'{{ round($product->reviews()->avg('stars'), PHP_ROUND_HALF_UP) }}'"></review-stars>
                 {{ round($product->reviews()->avg('stars'), PHP_ROUND_HALF_UP) }} stars

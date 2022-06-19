@@ -1,12 +1,12 @@
 <template>
     <div>
-        <button class="btn btn-danger" @click="showModal=true">Delete Category</button>
+        <button class="btn btn-danger" @click="showModal=true">Supprimer la catégorie</button>
         <confirm-modal v-if="showModal"
                        @cancel="close()"
                        @confirm="onDelete">
-            <h3 slot="header">Delete {{ category.name }}</h3>
+            <h3 slot="header">Supprimer {{ category.name }}</h3>
             <p slot="body">
-                Are you sure you want to delete this category?
+                Êtes-vous sûr de vouloir supprimer cette catégorie?
             </p>
         </confirm-modal>
     </div>

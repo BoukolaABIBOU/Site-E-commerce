@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="pull-right">
-            <button class="btn btn-primary" @click="show.form = true">Create Tax</button>
+            <button class="btn btn-primary" @click="show.form = true">Créer une taxe</button>
         </div><!-- /.pull-right -->
         <full-screen v-if="show.form" :close="closeForm">
             <h3 slot="header">{{ form.header }}</h3>
@@ -19,10 +19,10 @@
         <table class="table">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Percent</th>
-                <th>Edit</th>
-                <th>Delete</th>
+                <th>Nom</th>
+                <th>Pourcent</th>
+                <th>Editer</th>
+                <th>Supprimer</th>
             </tr>
             </thead>
             <fade-out-animation>
@@ -54,7 +54,7 @@
                 page : 1,
                 lastPage : null,
                 form : {
-                    header : 'Add a Tax',
+                    header : 'Ajouter une taxe',
                     isEdit : false,
                     tax : null
                 },
@@ -116,7 +116,7 @@
              */
             openEdit(tax) {
                 this.form.tax = tax;
-                this.form.header = 'Edit this Tax';
+                this.form.header = 'Editer la taxe';
                 this.form.isEdit = true;
                 this.show.form = true;
             },
@@ -127,7 +127,7 @@
              */
             closeForm() {
                 this.show.form = false;
-                this.form.header = 'Add a Tax';
+                this.form.header = 'Ajouter une taxe';
                 this.form.isEdit = false;
                 this.form.tax = null;
             },

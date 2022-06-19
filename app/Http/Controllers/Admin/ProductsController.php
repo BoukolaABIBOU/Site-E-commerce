@@ -82,7 +82,7 @@ class ProductsController extends AbstractAdminController
         }
 
         return response()->json([
-            'message' => 'You have created a new product!'
+            'message' => 'Vous avez créé un nouveau produit!'
         ], 200);
     }
 
@@ -134,7 +134,7 @@ class ProductsController extends AbstractAdminController
         }
 
         return response()->json([
-            'message' => 'You have updated the product!'
+            'message' => 'Vous avez mis à jour le produit!'
         ], 200);
     }
 
@@ -147,7 +147,7 @@ class ProductsController extends AbstractAdminController
     public function destroy($id)
     {
         $this->products = $this->products->findOrFail($id);
-        $message = "You deleted the {$this->products->title} product!";
+        $message = "Vous avez supprimé le {$this->products->title} produit!";
 
         $this->products->findOrFail($id)->delete();
 

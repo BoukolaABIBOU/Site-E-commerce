@@ -65,7 +65,7 @@ class UserAddressRequest extends FormRequest
     public function updateAddress(Address $address)
     {
         $this->saveAddress($address);
-        return 'You have updated your address';
+        return 'Vous avez mis à jour votre adresse';
 
     }
 

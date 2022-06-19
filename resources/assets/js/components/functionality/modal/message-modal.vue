@@ -7,7 +7,7 @@
                        aria-hidden="true" @click="cancel"></i>
                 </div>
                 <div class="modal-body">
-                    <slot>default body</slot>
+                    <slot>corps par défaut</slot>
                 </div><!-- /.modal-body -->
             </div><!-- /.modal-container -->
         </div><!-- /.modal-wrapper -->

@@ -67,7 +67,7 @@ abstract class AbstractErrorTracker implements ErrorTrackerInterface
         if((int)$this->model->user_id !== (int)$this->user->id)
         {
             $this->responseTracker->setResult(403,
-                "Error: You are not authorized to perform this action", true);
+                "Erreur : Vous n’êtes pas autorisé à effectuer cette action", true);
         }
     }
 

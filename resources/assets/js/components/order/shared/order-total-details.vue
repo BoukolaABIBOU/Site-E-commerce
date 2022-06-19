@@ -1,10 +1,10 @@
 <template>
     <div class="well">
         <p class="order-summary">
-            <strong>Summary</strong>
+            <strong>Résumé</strong>
         </p>
         <p>
-            <strong>Subtotal:</strong>
+            <strong>Sous-total:</strong>
             <span class="pull-right">${{ order.sub_total }} </span>
         </p>
         <p>

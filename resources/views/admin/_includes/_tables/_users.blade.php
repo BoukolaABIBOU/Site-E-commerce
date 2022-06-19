@@ -1,15 +1,15 @@
 <div class="page-header">
-    <h1>Users Page</h1>
+    <h1>Page Utilisateurs</h1>
 </div>
 <table class="table">
     <thead>
     <tr>
-        <th>User Name</th>
-        <th>First Name</th>
-        <th>Last Name</th>
+        <th>Nom Utilisateur</th>
+        <th>Nom</th>
+        <th>Prénom</th>
         <th>Email</th>
-        <th>Addresses</th>
-        <th>Orders</th>
+        <th>Adresses</th>
+        <th>Commandes</th>
     </tr>
     </thead>
     <tbody>
@@ -28,10 +28,10 @@
                     <span class="table-element">{{ $user->email }}</span>
                 </td>
                 <td>
-                    <a href="{{ action('Admin\UsersController@addresses', ['user' => $user->id]) }}" class="btn btn-primary">Addresses</a>
+                    <a href="{{ action('Admin\UsersController@addresses', ['user' => $user->id]) }}" class="btn btn-primary">Adresses</a>
                 </td>
                 <td>
-                    <a href="{{ action('Admin\UsersController@orders', ['user' => $user->id]) }}" class="btn btn-primary">Orders</a>
+                    <a href="{{ action('Admin\UsersController@orders', ['user' => $user->id]) }}" class="btn btn-primary">Commandes</a>
                 </td>
             </tr>
         @endforeach

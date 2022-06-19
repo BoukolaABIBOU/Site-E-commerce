@@ -1,5 +1,5 @@
 <div class="page-header">
-    <h1>Categories Page</h1>
+    <h1>Page Catégories</h1>
 </div>
 <div class="col-sm-4 col-sm-offset-3">
     <div class="well">

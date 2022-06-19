@@ -19,7 +19,7 @@ class AjaxUserNotLoggedInRequest
         if(!Auth::check())
         {
             return response()->json([
-                'error' => 'You are not authorized to perform this request!'
+                'error' => 'Vous n’êtes pas autorisé à effectuer cette demande!'
             ], 401);
         }
 

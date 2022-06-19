@@ -3,7 +3,7 @@
 |--------------------------------------------------------------------------
 | OrderTransformers.php
 |--------------------------------------------------------------------------
-| Created by Shawn Legge
+| 
 | This class is responsible for receiving either an order or a collection
 | and returning an array of information about a single order or a collection
 | of orders

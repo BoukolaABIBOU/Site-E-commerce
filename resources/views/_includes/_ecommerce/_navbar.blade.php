@@ -27,12 +27,12 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="admin-page">Admin <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ action('Admin\AdminHomeController@index') }}">Acceuil</a></li>
-                            <li><a href="{{ action('Admin\UsersController@index') }}">Users Page</a></li>
+                            <li><a href="{{ action('Admin\UsersController@index') }}">Utilisateurs</a></li>
                             <li><a href="{{ action('Admin\ProductsController@index') }}">Produits</a></li>
                             <li><a href="{{ action('Admin\OrdersController@index') }}"> Commandes</a></li>
                             <li><a href="{{ action('Admin\CategoriesController@index') }}">Catégories </a></li>
                             <li><a href="{{ action('Admin\TaxesController@index') }}">Taxes </a></li>
-                            <li><a href="{{ action('Admin\StatesController@index') }}">Status</a></li>
+                            <li><a href="{{ action('Admin\StatesController@index') }}">Etats</a></li>
                         </ul>
                     </li>
                 @endif

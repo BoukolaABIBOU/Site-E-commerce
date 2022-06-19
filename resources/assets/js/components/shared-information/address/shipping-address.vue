@@ -1,6 +1,6 @@
 <template>
     <div class="well">
-        <h4><u>Addresse d'expedition: </u></h4>
+        <h4><u>Addresse d'expédition: </u></h4>
         <p>
             {{ address.street_address }} <br />
             {{ address.city }}, {{ address.state }} {{ address.postal_code }}

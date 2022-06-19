@@ -4,7 +4,7 @@
             <h5><u>Date de la commande</u></h5>
             <p>
                 Date de la commande: <strong>{{ order.order_date }}</strong>   <br />
-                Has Been Shipped: <strong>{{ shipped }}</strong>  <br />
+                A été expédié: <strong>{{ shipped }}</strong>  <br />
                 A été expédié: <strong v-if="order.ship_date">{{ order.ship_date }}</strong>
             </p>
         </div>

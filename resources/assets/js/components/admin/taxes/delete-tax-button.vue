@@ -1,12 +1,12 @@
 <template>
     <div>
-        <button class="btn btn-danger" @click="showModal = true">Delete Tax</button>
+        <button class="btn btn-danger" @click="showModal = true">Suprimer une taxe</button>
         <confirm-modal v-if="showModal"
                        @cancel="close()"
                        @confirm="onDelete">
-            <h3 slot="header">Delete {{ tax.name }}</h3>
+            <h3 slot="header">Supprimer {{ tax.name }}</h3>
             <p slot="body">
-                Are you sure you want to delete this tax?
+                Êtes-vous sûr de vouloir supprimer cette taxe?
             </p>
         </confirm-modal>
     </div>

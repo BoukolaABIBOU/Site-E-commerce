@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-6">
                 <div :class="{'form-group': true, 'has-error' : fieldErrors.discount}">
-                    <label for="sale-discount" class="control-label">Discount:</label>
+                    <label for="sale-discount" class="control-label">Réduction:</label>
                     <select class="form-control"
                             id="sale-discount"
                             v-model="sale.discount"
@@ -50,7 +50,7 @@
                     </select>
                     <span class="help-block"
                           v-show="fieldErrors.discount">
-                                    <strong>The discount field is required.</strong>
+                                    <strong>Le champ relatif à la réduction est requis.</strong>
                                 </span>
                 </div><!-- /.form-group -->
             </div><!-- /.col -->
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <button type="submit" id="sale-submit" class="btn btn-success pull-left">{{ button.submit }}</button>
-                <button type="button" class="btn btn-danger pull-right" @click="cancel">Cancel</button>
+                <button type="button" class="btn btn-danger pull-right" @click="cancel">Annuler</button>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </form>
@@ -77,7 +77,7 @@
                     product_id : {required : true, type : Number}
                 },
                 button : {
-                    submit : 'Add',
+                    submit : 'Ajouter',
                 },
                 config : {
                     format : 'YYYY-MM-DD',
@@ -114,7 +114,7 @@
              */
             setProperties() {
                 this.sale = {};
-                this.button.submit = (this.onSale) ? 'Edit Sale' : 'Add Sale';
+                this.button.submit = (this.onSale) ? 'Editer une vente' : 'Ajouter une vente';
                 if(this.onSale) {
                     this.fillOutForm();
                 }
@@ -162,19 +162,19 @@
              */
             validateDateRequired(){
                 if(this.sale.start === null) {
-                    this.fieldErrors.start = 'The start date field is required!';
+                    this.fieldErrors.start = 'le champ de date de début est requis!';
                 } else {
                     this.fieldErrors.start = false;
                 }
 
                 if(this.sale.finish === null) {
-                    this.fieldErrors.finish = 'The finish date field is required!';
+                    this.fieldErrors.finish = 'Le champ de la date de fin est requis!';
                 }else {
                     this.fieldErrors.finish = false;
                 }
 
                 if(this.sale.discount === null) {
-                    this.fieldErrors.discount = 'The discount field is required!';
+                    this.fieldErrors.discount = 'Le champ relatif à la réduction est requis!';
                 }else {
                     this.fieldErrors.discount = false;
                 }
@@ -192,7 +192,7 @@
                 let start = new Date(this.sale.start);
                 let finish = new Date(this.sale.finish);
                 if(start.getTime() > finish.getTime()) {
-                    this.fieldErrors.start = 'The start date must be before the finish date';
+                    this.fieldErrors.start = 'La date de début doit être antérieure à la date de fin.';
                 } else {
                     this.fieldErrors.start = false;
                 }

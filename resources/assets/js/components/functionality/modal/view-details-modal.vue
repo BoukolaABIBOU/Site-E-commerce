@@ -3,14 +3,14 @@
         <div class="modal-container">
             <div class="modal-body">
                 <slot name="body">
-                    default body
+                    corps par défaut
                 </slot>
             </div><!-- /.modal-body -->
             <div class="modal-footer">
                 <slot name="footer">
                     <div class="row">
                         <div class="pull-right">
-                            <button class="btn btn-danger" @click="close">Close</button>
+                            <button class="btn btn-danger" @click="close">Fermer</button>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </slot>

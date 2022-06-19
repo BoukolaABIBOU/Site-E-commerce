@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-sm-4">
                 <div :class="{'form-group': true, 'has-error' : errors.has('title')}">
-                    <label for="title" class="control-label">Title: </label>
+                    <label for="title" class="control-label">Titre: </label>
                     <input class="form-control"
                            type="text"
                            name="title"
@@ -18,7 +18,7 @@
             </div><!-- /.col -->
             <div class="col-sm-4">
                 <div :class="{'form-group': true, 'has-error' : errors.has('price')}">
-                    <label for="price" class="control-label">Price: </label>
+                    <label for="price" class="control-label">Prix: </label>
                     <input class="form-control"
                            type="text"
                            name="price"
@@ -50,7 +50,7 @@
         <div class="row">
             <div class="col-sm-6" v-if="categories">
                 <div :class="{'form-group': true, 'has-error' : errors.has('category')}">
-                     <label for="category" class="control-label">Category: </label>
+                     <label for="category" class="control-label">Categorie: </label>
                      <select class="form-control"
                              id="category"
                              name="category"
@@ -66,7 +66,7 @@
             </div><!-- /.col -->
             <div class="col-sm-6" v-if="taxes">
                 <div :class="{'form-group': true, 'has-error' : errors.has('tax')}">
-                    <label for="tax" class="control-label">Tax: </label>
+                    <label for="tax" class="control-label">Taxe: </label>
                     <select class="form-control"
                             id="tax"
                             name="tax"
@@ -102,14 +102,14 @@
         <div class="row">
             <div class="col-sm-6">
                 <label class="checkbox-inline">
-                    <input type="checkbox" v-model="showUpload"><strong>Upload Image:</strong>
+                    <input type="checkbox" v-model="showUpload"><strong>Telécharger l'image:</strong>
                 </label>
             </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row" v-if="!showUpload" >
             <div class="col-sm-6">
                 <div :class="{'form-group': true, 'has-error' : errors.has('image')}">
-                    <label>Image Path: </label>
+                    <label>Chemin de l'image: </label>
                     <input class="form-control"
                            type="text"
                            id="image"
@@ -141,7 +141,7 @@
         <div class="row" v-else>
             <div class="col-sm-6">
                 <div :class="{'form-group': true, 'has-error' : errors.has('upload-image')}">
-                    <label for="upload-image" class="control-label">Upload Image: </label>
+                    <label for="upload-image" class="control-label">Télécharger l’image :</label>
                     <input type="file"
                            name="upload-image"
                            id="upload-image"
@@ -163,7 +163,7 @@
         <div class="row">
             <div class="col-sm-12">
                 <button type="submit" class="btn btn-success pull-left">{{ submitButton }}</button>
-                <button type="button" class="btn btn-danger pull-right" @click="cancel">Cancel</button>
+                <button type="button" class="btn btn-danger pull-right" @click="cancel">Annuler</button>
             </div><!-- /.col -->
         </div><!-- /.row -->
     </form>

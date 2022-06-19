@@ -39,7 +39,7 @@ class BillingController extends Controller
         session()->forget('user_order');
 
         return response()->json([
-            'status' => 'Your payment was accepted!',
+            'status' => 'Votre paiement a été accepté!',
             'estimated_arrival_date' => ShippingDateEstimator::arrivalDate(new \DateTime()),
             'data' => $request->getOrder()
         ], 200);

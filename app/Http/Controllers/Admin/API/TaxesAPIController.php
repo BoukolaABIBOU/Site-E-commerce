@@ -81,7 +81,7 @@ class TaxesAPIController extends AbstractAdminController
         } catch (\Exception $exception) {
             $this->processingError();
         }
-        return $this->jsonMessage('You have created a new tax!');
+        return $this->jsonMessage('Vous avez créé une nouvelle taxe!');
     }
 
     /**
@@ -122,7 +122,7 @@ class TaxesAPIController extends AbstractAdminController
             return $this->processingError();
         }
 
-        return $this->jsonMessage('You updated a tax!');
+        return $this->jsonMessage('Vous avez modifié une taxe!');
     }
 
     /**
@@ -139,6 +139,6 @@ class TaxesAPIController extends AbstractAdminController
         } catch (\Exception $exception) {
             $this->processingError();
         }
-        return $this->jsonMessage('You deleted a tax!');
+        return $this->jsonMessage('Vous avez supprimé une taxe!');
     }
 }

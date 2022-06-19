@@ -4,11 +4,11 @@
             <div class="modal-container">
                 <div class="modal-header">
                     <slot name="header">
-                        default header
+                        en-tête par défaut
                     </slot>
                 </div><!-- /.modal-header -->
                 <div class="modal-body">
-                    <slot name="body">default body</slot>
+                    <slot name="body">corps par défaut</slot>
                 </div><!-- /.modal-body -->
                 <div class="modal-footer">
                     <slot name="footer">
@@ -17,7 +17,7 @@
                                 <button class="btn btn-primary" @click="confirm">OK</button>
                             </div><!-- /.col -->
                             <div class="col-xs-3 col-xs-offset-1">
-                                <button class="btn btn-danger" @click="cancel">Cancel</button>
+                                <button class="btn btn-danger" @click="cancel">Annuler</button>
                             </div><!-- /.col -->
                         </div><!-- /.row -->
                     </slot>

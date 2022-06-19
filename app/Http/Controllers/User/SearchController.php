@@ -58,7 +58,7 @@ class SearchController extends UserPagesController
     {
         if(!preg_match('/^[\pL1-9\s.\',?]+$/u', $search))
         {
-            return $this->hasError('The search may only contain letters, numbers, punctuation, and spaces.');
+            return $this->hasError('La recherche ne peut contenir que des lettres, des chiffres, des ponctuations et des espaces.');
         }
 
         return view('ecommerce.search', [

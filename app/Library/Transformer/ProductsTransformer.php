@@ -3,7 +3,7 @@
 |--------------------------------------------------------------------------
 | ProductsTransformer.php
 |--------------------------------------------------------------------------
-| Created by Shawn Legge
+| 
 | This class is responsible for a Product object and returns an array with
 | 1) category
 | 2) image

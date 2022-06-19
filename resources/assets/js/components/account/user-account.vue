@@ -1,7 +1,7 @@
 <template>
     <div v-if="accountDetails">
         <div class="page-header">
-            <h1>Account Details</h1>
+            <h1>Détails du compte</h1>
         </div>
         <user-account-header>
 
@@ -9,7 +9,7 @@
         <div class="panel panel-primary" v-show="showAddress">
             <div class="panel-heading">
                 <h4>
-                    User's Addresses
+                    Adresses de l’utilisateur
                     <i class="fa fa-times close-modal pull-right"
                        aria-hidden="true" @click="toggleAddress"></i>
                 </h4>
@@ -23,7 +23,7 @@
         <div class="panel panel-default" v-show="showOrder">
             <div class="panel-heading">
                 <h4>
-                    User's Orders
+                   Commandes des utilisateurs
                     <i class="fa fa-times close-modal pull-right"
                        aria-hidden="true" @click="toggleOrder"></i>
                 </h4>

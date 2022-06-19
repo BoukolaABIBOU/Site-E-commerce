@@ -3,16 +3,16 @@
         <td class="table-element">{{ state.name }}</td>
         <td class="table-element">{{ state.abbreviation }}</td>
         <td>
-            <button class="btn btn-primary" @click="openEdit(state)">Edit State</button>
+            <button class="btn btn-primary" @click="openEdit(state)">Editer un état</button>
         </td>
         <td>
-            <button class="btn btn-danger" @click="show.deleteForm = true">Delete State</button>
+            <button class="btn btn-danger" @click="show.deleteForm = true">Supprimer un état</button>
             <confirm-modal v-if="show.deleteForm"
                            @cancel="close"
                            @confirm="onDelete">
-                <h3 slot="header">Delete {{ state.name }}</h3>
+                <h3 slot="header">Supprimer {{ state.name }}</h3>
                 <p slot="body">
-                    Are you sure you want to delete this state?
+                    Êtes-vous sûr de vouloir supprimer cet état?
                 </p>
             </confirm-modal>
         </td>

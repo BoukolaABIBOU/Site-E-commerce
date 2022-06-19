@@ -16,7 +16,7 @@
 
                 </select-cart-quantity>
                 <div v-if="!isForm">
-                    <strong>Quantity: </strong>{{ item.quantity }}
+                    <strong>Quantité: </strong>{{ item.quantity }}
                 </div>
             </div><!-- /.form-group -->
         </div><!-- /.order-quantity -->

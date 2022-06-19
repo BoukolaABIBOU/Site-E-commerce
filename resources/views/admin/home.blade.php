@@ -5,26 +5,26 @@
         <div class="col-sm-6">
             <div class="panel panel-default panel-categories">
                 <div class="panel-heading">
-                    Users Page
+                    Page Utilisateurs
                     <i class="fa fa-user pull-right" aria-hidden="true"></i>
                 </div><!-- /.panel-heading -->
                 <div class="panel-body">
-                    The users' page contains information all the users registered at your site.  View users' details including user's addresses and orders.
+                    La page des utilisateurs contient des renseignements sur tous les utilisateurs inscrits sur votre site. Consultez les renseignements sur les utilisateurs, y compris leurs adresses et leurs commandes.
                     <br />
-                    <a href="{{ action('Admin\UsersController@index')  }}" class="btn btn-info">Users</a>
+                    <a href="{{ action('Admin\UsersController@index')  }}" class="btn btn-info">Utilisateurs</a>
                 </div><!-- /.panel-body -->
             </div><!-- /.panel -->
         </div><!-- /.col -->
         <div class="col-sm-6">
             <div class="panel panel-default panel-categories">
                 <div class="panel-heading">
-                    Products Page
+                    Page Produits
                     <i class="fa fa-product-hunt pull-right" aria-hidden="true"></i>
                 </div><!-- /.panel-heading -->
                 <div class="panel-body">
-                    The products' page contains information all the products on your site.  Mangage your products at this page including adding new products or sales.
+                    La page des produits contient de l’information sur tous les produits de votre site. Mangage de vos produits à cette page, y compris l’ajout de nouveaux produits ou des ventes.
                     <br />
-                    <a href="{{ action('Admin\ProductsController@index')  }}" class="btn btn-info">Products</a>
+                    <a href="{{ action('Admin\ProductsController@index')  }}" class="btn btn-info">Produits</a>
                 </div><!-- /.panel-body -->
             </div><!-- /.panel -->
         </div><!-- /.col -->
@@ -33,26 +33,26 @@
         <div class="col-sm-6">
             <div class="panel panel-default panel-categories">
                 <div class="panel-heading">
-                    Orders Page
+                 Page Commandes
                     <i class="fa fa-shopping-cart pull-right" aria-hidden="true"></i>
                 </div><!-- /.panel-heading -->
                 <div class="panel-body">
-                    The orders' page contains information all orders placed on your site  Inform your customers that their orders have been shipped from this page.
+                    La page des commandes contient des informations sur toutes les commandes passées sur votre site Informez vos clients que leurs commandes ont été expédiées à partir de cette page.
                     <br />
-                    <a href="{{ action('Admin\OrdersController@index')  }}" class="btn btn-info">Orders</a>
+                    <a href="{{ action('Admin\OrdersController@index')  }}" class="btn btn-info">Commandes</a>
                 </div><!-- /.panel-body -->
             </div><!-- /.panel -->
         </div><!-- /.col -->
         <div class="col-sm-6">
             <div class="panel panel-default panel-categories">
                 <div class="panel-heading">
-                    Categories Page
+                  Page Catégories
                     <i class="fa fa-list-alt pull-right" aria-hidden="true"></i>
                 </div><!-- /.panel-heading -->
                 <div class="panel-body">
-                    The categories' page allows you to manage the categories that your products can be organised into.
+                    La page des catégories vous permet de gérer les catégories dans lesquelles vos produits peuvent être organisés.
                     <br />
-                    <a href="{{ action('Admin\CategoriesController@index')  }}" class="btn btn-info">Categories</a>
+                    <a href="{{ action('Admin\CategoriesController@index')  }}" class="btn btn-info">Catégories</a>
                 </div><!-- /.panel-body -->
             </div><!-- /.panel -->
         </div><!-- /.col -->
@@ -61,11 +61,11 @@
         <div class="col-sm-6">
             <div class="panel panel-default panel-categories">
                 <div class="panel-heading">
-                    Taxes Page
+                    Page Taxes
                     <i class="fa fa-money pull-right" aria-hidden="true"></i>
                 </div><!-- /.panel-heading -->
                 <div class="panel-body">
-                    The taxes' page contains information all taxes that can be charged on products.
+                    La page des taxes contient des informations sur toutes les taxes pouvant être facturées sur les produits.
                     <br />
                     <a href="{{ action('Admin\TaxesController@index')  }}" class="btn btn-info">Taxes</a>
                 </div><!-- /.panel-body -->

@@ -1,10 +1,10 @@
 <template>
     <div>
-        <button class="btn btn-danger" id="delete-button" @click="open()">Delete</button>
+        <button class="btn btn-danger" id="delete-button" @click="open()">Supprimer</button>
         <confirm-modal v-if="showModal"
                        @cancel="close()"
                        @confirm="onDelete">
-            <h3 slot="header">Delete {{ product.title }}</h3>
+            <h3 slot="header">Supprimer {{ product.title }}</h3>
             <p slot="body">
                 <img :src="product.image.thumbnail" :alt="'Image of ' + product.title">
             </p>

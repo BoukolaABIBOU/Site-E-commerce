@@ -32,7 +32,7 @@ class CreateProducts extends Command
      */
     private $states = [
         'Other' => 'Other',
-        'AL'=>'ALABAMA',
+        'AL3...'=>'ALABAMA',
         'AK'=>'ALASKA',
         'AS'=>'AMERICAN SAMOA',
         'AZ'=>'ARIZONA',

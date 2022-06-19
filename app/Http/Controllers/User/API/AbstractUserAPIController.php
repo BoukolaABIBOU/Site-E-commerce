@@ -32,7 +32,7 @@ abstract class AbstractUserAPIController extends Controller
     protected function onSuccess()
     {
         return response()->json([
-            'status' => 'Your request has been completed'
+            'status' => 'Votre demande a été traitée.'
         ], 200);
     }
 

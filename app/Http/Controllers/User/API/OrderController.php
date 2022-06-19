@@ -66,7 +66,7 @@ class OrderController extends AbstractUserAPIController
         if($order->belongsToUser(Auth::user()->id))
         {
             return response()->json([
-                'status' => 'You order was found',
+                'status' => 'Votre commande a été trouvée',
                 'details' => OrderTransformers::single($order, true, true, true)
             ], 200);
         }
@@ -81,7 +81,7 @@ class OrderController extends AbstractUserAPIController
      */
     public function store(UserOrderRequest $request)
     {
-        $this->message = 'You have selected an address!';
+        $this->message = 'Vous avez sélectionné une adresse!';
         try {
             $this->address = $this->address->findOrFail($request->address_id);
             $apiErrorTracker = $this->errorBuilder->create(Auth::user(), $this->address);
@@ -109,7 +109,7 @@ class OrderController extends AbstractUserAPIController
      */
     public function update(UserOrderRequest $request, $id)
     {
-        $this->message = 'You have updated your address!';
+        $this->message = 'Vous avez mis à jour votre adresse!';
         try{
             $this->address = $this->address->findOrFail($request->address_id);
             $this->order = $this->order->findOrFail($id);

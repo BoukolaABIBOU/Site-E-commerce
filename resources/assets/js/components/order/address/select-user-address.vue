@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h4>Where do you want the package shipped</h4>
+        <h4>Où voulez-vous que le colis soit expédié?</h4>
         <add-new-address :refresh="refreshAddress">
 
         </add-new-address>

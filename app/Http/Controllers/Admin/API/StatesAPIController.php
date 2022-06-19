@@ -54,7 +54,7 @@ class StatesAPIController extends AbstractAdminController
             return $this->processingError();
         }
 
-        return $this->jsonMessage('You have created a new state!');
+        return $this->jsonMessage('Vous avez créé un nouvel état!');
     }
 
     /**
@@ -72,7 +72,7 @@ class StatesAPIController extends AbstractAdminController
             return $this->processingError();
         }
 
-        return $this->jsonMessage('You have updated a state!');
+        return $this->jsonMessage('Vous avez mis à jour un état!');
     }
 
     /**
@@ -88,6 +88,6 @@ class StatesAPIController extends AbstractAdminController
         } catch (\Exception $exception) {
             return $this->processingError();
         }
-        return $this->jsonMessage('You deleted a state!');
+        return $this->jsonMessage('Vous avez supprimé un état!');
     }
 }

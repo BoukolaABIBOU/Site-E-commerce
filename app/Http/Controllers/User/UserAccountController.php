@@ -52,7 +52,7 @@ class UserAccountController extends UserPagesController
         if(!$this->order->exists((int)$id)  ||
             !$this->order->find((int)$id)->belongsToUser(Auth::user()->id))
         {
-            return $this->hasError('The order you selected does not belong to your account');
+            return $this->hasError('L’ordre que vous avez sélectionné n’appartient pas à votre compte');
         }
 
         return view('ecommerce.accountOrder', [

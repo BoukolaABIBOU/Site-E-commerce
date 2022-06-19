@@ -2863,13 +2863,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 count = this.cart.products.length;
             }
             if (count === 0) {
-                return "Empty";
+                return "Panier";
             }
             if (count === 1) {
-                return "1 Item";
+                return "1 Livre";
             }
             if (count > 1) {
-                return count + " Items";
+                return count + " Livres";
             }
         },
 
@@ -2888,11 +2888,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
          * @return {string}
          */
         getTotalMessage: function getTotalMessage() {
-            var message = this.cart.information.count + ' Item';
+            var message = this.cart.information.count + ' Livre';
             if (this.cart.information.count != 1) {
                 message += 's';
             }
-            message += ' with total of $' + this.cart.information.total;
+            message += ' avec un total de ' + this.cart.information.total + ' fcfa';
             return message;
         },
 

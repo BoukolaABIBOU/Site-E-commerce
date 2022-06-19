@@ -1,18 +1,18 @@
 
 <div class="page-header">
-    <h1>Users Orders</h1>
-    <h3>Orders for {{ $user->fullName() }}</h3>
+    <h1>Commandes Utilisateurs</h1>
+    <h3>Commandes pour {{ $user->fullName() }}</h3>
 </div>
 @if($user->orders->count() > 0)
     <table class="table">
         <thead>
         <tr>
-            <th>Order ID</th>
-            <th>User</th>
+            <th>Command ID</th>
+            <th>Utilisateur</th>
             <th>Total</th>
-            <th>Items Ordered</th>
-            <th>Shipped</th>
-            <th>View</th>
+            <th>Livres commandés</th>
+            <th>Expédié</th>
+            <th>Voir</th>
         </tr>
         </thead>
         <tbody>
@@ -23,11 +23,11 @@
                 <td class="table-element">{{ $order->total }}</td>
                 <td class="table-element">{{ $order->products->count() }}</td>
                 <td class="table-element">{{ $order->shipped }}</td>
-                <td><a class="btn btn-primary" href="">View Order</a></td>
+                <td><a class="btn btn-primary" href="">Voir commande</a></td>
             </tr>
         @endforeach
         </tbody>
     </table>
 @else
-    <h4>There are no records for any addresses for this user</h4>
+    <h4>Il n’y a aucun enregistrement pour les adresses à cette fin.</h4>
 @endif

@@ -78,7 +78,7 @@ class SalesController extends AbstractAdminController
         }
 
         return response()->json([
-            'message' => "You have added a sale to the {$this->product->title} product!"
+            'message' => "Vous avez ajouté une vente au {$this->product->title} produit!"
         ], 200);
     }
 
@@ -131,7 +131,7 @@ class SalesController extends AbstractAdminController
         }
 
         return response()->json([
-            'message' => 'You updated a sale!'
+            'message' => 'Vous avez mis à jour une vente!'
         ], 200);
     }
 

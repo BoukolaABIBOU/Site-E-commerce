@@ -10,12 +10,12 @@
                            @click="cancel"></i>
                     </div>
                     <slot name="header">
-                        default header
+                        en-tête par défaut
                     </slot>
                 </div><!-- /.modal-header -->
                 <div class="modal-body">
                     <slot name="body">
-                        default body
+                        corps par défaut
                     </slot>
                 </div><!-- /.modal-body -->
             </div><!-- /.modal-container -->

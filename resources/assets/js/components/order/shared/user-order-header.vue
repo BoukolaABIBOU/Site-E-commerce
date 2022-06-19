@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3>Order Details</h3>
+            <h3>Détails de la commande</h3>
         </div><!-- /.panel-heading -->
         <div class="panel-body">
             <div class="row">
@@ -19,19 +19,19 @@
             <div class="row">
                 <div class="col-sm-6">
                     <div class="well">
-                        <h3>Payment</h3>
+                        <h3>Paiement</h3>
                         <strong>Paid:
-                            <span v-if="order.paid_for" class="text-success">Yes</span>
-                            <span v-else class="text-danger">No</span>
+                            <span v-if="order.paid_for" class="text-success">Oui</span>
+                            <span v-else class="text-danger">Non</span>
                         </strong>
                         <br />
-                        <strong>Shipped:
-                            <span v-if="order.shipped" class="text-success">Yes</span>
-                            <span v-else class="text-danger">No</span>
+                        <strong>Expédition:
+                            <span v-if="order.shipped" class="text-success">Oui</span>
+                            <span v-else class="text-danger">Non</span>
                         </strong>
                         <br>
                         <strong v-if="order.shipped">
-                            Ship Date: {{ order.ship_date }}
+                            Date d'expédition: {{ order.ship_date }}
                         </strong>
                     </div><!-- /.well -->
                 </div><!-- /.col -->

@@ -66,7 +66,7 @@ class ShoppingCartController extends AbstractUserAPIController
             $shoppingCart->setQuantity($request->input('quantity'));
             $message = $shoppingCart->getResult();
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an error adding to your cart.  Please try again', 422);
+            return $this->hasError('Désolé, une erreur s’est glissée dans votre panier. Veuillez réessayer.', 422);
         }
 
         return response()->json([
@@ -94,7 +94,7 @@ class ShoppingCartController extends AbstractUserAPIController
             $shoppingCart->setQuantity($request->input('quantity'));
             $message = $shoppingCart->getResult();
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an error updating your cart.  Please try again', 422);
+            return $this->hasError('Désolé, il y a eu une erreur dans la mise à jour de votre panier. Veuillez réessayer.', 422);
         }
 
         return response()->json([
@@ -120,7 +120,7 @@ class ShoppingCartController extends AbstractUserAPIController
             $shoppingCart = new ShoppingCartRemove($product, CartProvider::instance());
             $message = $shoppingCart->getResult();
         } catch (\Exception $exception) {
-            return $this->hasError('Sorry there was an error removing an item from your cart.  Please try again', 422);
+            return $this->hasError('Désolé, il y a eu une erreur lors du retrait d’un article de votre panier. Veuillez réessayer.', 422);
         }
 
         return response()->json([

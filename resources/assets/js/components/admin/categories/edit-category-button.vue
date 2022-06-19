@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button v-if="showButton" class="btn btn-primary" @click="showButton = false">Edit Category</button>
+        <button v-if="showButton" class="btn btn-primary" @click="showButton = false">Modifier une catégorie</button>
         <category-form v-else :currentCategory="category" @close-form="showButton = true"></category-form>
     </div>
 </template>
