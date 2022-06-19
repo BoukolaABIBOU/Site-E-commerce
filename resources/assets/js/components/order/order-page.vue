@@ -44,10 +44,10 @@
         data: function() {
           return {
               steps : {
-                  'Edit_Cart': {name : 'Edit Cart', url : 'edit-order', step : 1, complete : true},
-                  'Address': {name : 'Select Address',  url : 'select-address', step : 2, complete : false},
-                  'Payment' : {name : 'Payment', url : 'payment', step : 3, complete : false},
-                  'Confirm' :  {name : 'Invoice', url : 'invoice', step : 4, complete : false},
+                  'Edit_Cart': {name : 'Montage du panier', url : 'edit-order', step : 1, complete : true},
+                  'Address': {name : 'Adresse de selection',  url : 'select-address', step : 2, complete : false},
+                  'Payment' : {name : 'Paiement', url : 'payment', step : 3, complete : false},
+                  'Confirm' :  {name : 'Facture', url : 'invoice', step : 4, complete : false},
               },
               current : 1,
           }
