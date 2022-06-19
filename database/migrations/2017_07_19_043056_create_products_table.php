@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('image_id')->unsigned()->nullable();
             $table->string('name_auteur')->nullable();
             $table->integer('edition')->unsigned()->nullable();
-            //$table->string('owner_id')-> nullable();
+            $table->integer('owner_id')-> nullable();
             $table->string('title');
             $table->decimal('price');
             $table->longText('description', 500);
@@ -40,10 +40,10 @@ class CreateProductsTable extends Migration
                 ->on('images')
                 ->onDelete('cascade');
             
-               /*$table->foreign('owner_id')
+               $table->foreign('owner_id')
                 ->references('id')
                 ->on('users')
-                ->onDelete('cascade');*/
+                ->onDelete('cascade');
 
                 
         });
