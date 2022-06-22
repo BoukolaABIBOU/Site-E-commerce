@@ -45,7 +45,6 @@
 
 <script>
     export default {
-        props : ['seller_id'],             
         data : function() {
             return {
                 products : null,
@@ -70,6 +69,7 @@
         },
 
         mounted() {
+            console.log('eoaijeoidj')
             this.getProducts();
         },
 

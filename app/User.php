@@ -29,6 +29,16 @@ class User extends Authenticatable
     ];
 
     /**
+     * A user has many products
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function products()
+    {
+        return $this->hasMany('App\Product');
+    }
+
+    /**
      * returns all the users addresses
      *
      * @param $query

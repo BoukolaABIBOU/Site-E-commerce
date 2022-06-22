@@ -38,6 +38,18 @@ class Product extends Model
         return (isset($this->image)) ? $this->image->thumbnail : 'empty';
     }
 
+
+        /**
+     * a product has a owner
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function owner()
+    {
+        return $this->belongsTo('App\User');
+    }
+
+
     /**
      * gets the price value and formats it with two digits
      *
@@ -46,7 +58,8 @@ class Product extends Model
      */
     public function getPriceAttribute($value)
     {
-        return money_format('%i', $value);
+        // return money_format('%i', $value);
+        return $value;
     }
 
     /**
@@ -56,7 +69,8 @@ class Product extends Model
      */
     public function setPriceAttribute($value)
     {
-        $this->attributes['price'] = money_format('%i', $value);
+        // $this->attributes['price'] = money_format('%i', $value);
+        $this->attributes['price'] = $value;
     }
 
     /**
