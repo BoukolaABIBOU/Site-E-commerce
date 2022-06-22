@@ -10,7 +10,7 @@
                     <h4 class="{{ $product->hasSale() ? 'price-cut' : 'price-amount' }}">
                         ${{ $product->price }}
                         @if($product->hasSale())
-                            <span class="pull-right price-amount">${{ $product->salePrice() }}</span>
+                            <span class="pull-right price-amount">{{ $product->salePrice() }} fcfa</span>
                         @endif
                     </h4>
                     <p>{{ $product->description }}</p>

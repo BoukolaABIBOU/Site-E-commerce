@@ -45,6 +45,7 @@
 
 <script>
     export default {
+        props : ['seller_id'],             
         data : function() {
             return {
                 products : null,
@@ -106,9 +107,10 @@
                 let self = this;
                 axios.get(window.Laravel.urls.product_api_url + '?page=' + this.page)
                     .then(function (response) {
+                        console.log(response);
                         self.page = response.data.products.current_page;
+                        self.products = response.data.products.data.filter(product => product.owner_id === this.seller_id);
                         self.last_page = response.data.products.last_page;
-                        self.products = response.data.products.data;
                     })
                     .catch(
                         () => self.updateError()

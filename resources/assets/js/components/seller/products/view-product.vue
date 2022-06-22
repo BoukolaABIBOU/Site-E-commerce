@@ -18,7 +18,7 @@
             </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row">
-            <button class="btn btn-danger pull-right" @click="cancel">Cancel</button>
+            <button class="btn btn-danger pull-right" @click="cancel">Annuler</button>
         </div><!-- /.row -->
     </div>
 </template>

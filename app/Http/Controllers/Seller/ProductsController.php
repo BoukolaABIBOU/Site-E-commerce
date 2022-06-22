@@ -52,8 +52,10 @@ class ProductsController extends AbstractSellerController
      */
     public function index()
     {
+        $seller =auth()-> user();
         return view('seller.index', [
-            'table' => 'seller._includes._tables._products'
+            'table' => 'seller._includes._tables._products',
+            'seller_id'=> $seller->id
         ]);
     }
 

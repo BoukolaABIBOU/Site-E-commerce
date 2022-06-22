@@ -4,7 +4,7 @@
     <div class="thumbnail">
         <img class="img-responsive" src="{{ $product->image->path }}" alt="Image of {{ $product->title }}">
         <div class="caption-full">
-            <h4 class="pull-right">${{ $product->price }}</h4>
+            <h4 class="pull-right">{{ $product->price }} fcfa</h4>
             <h4>
                 <a href="#">{{ $product->title }}</a>
             </h4>

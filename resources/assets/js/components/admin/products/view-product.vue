@@ -5,7 +5,7 @@
                 <img class="detail-image" :src="product.thumbnail" :alt="'Image of ' + product.title">
             </div><!-- /.col -->
             <div class="col-sm-6">
-                <span class="product-title">Prix: </span> <span class="price-amount">${{ product.price }}</span>
+                <span class="product-title">Prix: </span> <span class="price-amount"> fcfa{{ product.price }}</span>
                 <br />
                 <span class="product-title">Categorie: </span><span class="product-details">{{ product.category }}</span>
                 <br />

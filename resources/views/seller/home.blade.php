@@ -16,7 +16,14 @@
             </div><!-- /.panel -->
         </div><!-- /.col -->
     </div><!-- /.row -->
-    
-   
-
+        <br>
+        <h4> C'est les vacances!    Vider vos greniers!   Les livres encombrant, il est tant de les mettrent en vente!</h4>
+        <img src="{{asset('images/header1.jpeg')}}"/>
+        <hr>
+        <br>
+        <h4> Vous voulez vous faire de l'argent facilement, en vous débarrassant des ouvrages non utilisés. </h4>
+      
+        <h4>Alors, il est temps de mettre en vente vos livres.</h4>  
+        <img src="{{asset('images/header2.jpeg')}}"/>
+        <hr>  
 @endsection

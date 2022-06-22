@@ -11,9 +11,9 @@
         <div class="order-list-blocks order-list-border">
             <h5><u>Détails de la commande</u></h5>
             <p>
-                Sous-total: <strong>${{ order.cost.sub_total }}</strong> <br />
-                Taxes : <strong>${{ order.cost.taxes }}</strong> <br />
-                Total: <strong>${{ order.cost.total }}</strong>
+                Sous-total: <strong> {{ order.cost.sub_total }} fcfa</strong> <br />
+                Taxes : <strong> {{ order.cost.taxes }} fcfa</strong> <br />
+                Total: <strong> {{ order.cost.total }} fcfa</strong>
             </p>
         </div>
         <div class="order-list-blocks">

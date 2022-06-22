@@ -7,29 +7,12 @@
             <button class="btn btn-success" @click="beforeSubmit">
                 Paiement par carte  <i class="fa fa-credit-card" aria-hidden="true"></i>
             </button>
-            <hr>
-            <button id="pay-btn"
-                data-transaction-amount="1000"
-                data-transaction-description="Acheter mon produit"
-                data-customer-email="johndoe@gmail.com"
-                data-customer-lastname="Doe"
-                >Payer 1000 FCFA</button>
-  
-        </div><!-- /.panel-body -->
+             <hr>
+            <button id="pay-btn">Payer "Demo"</button>
+        </div><!-- /.panel-body -->   
     </div><!-- /.panel -->
-</template>
-<!--script feedapay-->
-<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
-<script type="text/javascript">
-    let widget =  FedaPay.init({
-      public_key: 'pk_sandbox_mSbAFlIEhe4MY-4BGuHc84H6'
-    });
-    let btn = document.getElementById('pay-btn');
-    btn.addEventListener('click', () => {
-      widget.open();
-    });
-  </script>
-  <!--script feedapay-->
+</template>    
+
 <script>
     export default {
         props: ['cart', 'order'],
@@ -106,11 +89,11 @@
              */
             emitError(error) {
                 Event.$emit('update-user-error', error.status);
-            }
+            },
         }
-
     }
 </script>
+
 
 <style>
 
