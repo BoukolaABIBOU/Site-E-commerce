@@ -37,17 +37,21 @@
         </table>
         <paginate-items :number="last_page"
                         :current="page"
-                        @select-page="setPage">
-
+                        @select-page="setPage" v-if="toPaginate" >
         </paginate-items>
     </div>
 </template>
 
 <script>
+    import PaginateItems from '../../functionality/paginate-items.vue'
+
     export default {
-        props : ['seller_id'],             
+        components: {
+            'paginate-items' : PaginateItems,
+        },
         data : function() {
             return {
+                toPaginate: false,
                 products : null,
                 page : 1,
                 lastPage : {required :true, type : Number},
@@ -56,7 +60,7 @@
                     form : false
                 },
                 form : {
-                    header : 'Add a Product',
+                    header : 'Ajouter un produit',
                     isEdit : false,
                     product : null
                 }
@@ -95,7 +99,7 @@
 
             openEdit(product) {
                 this.show.form = true;
-                this.form.header = 'Edit this Product!'
+                this.form.header = 'Modifier ce produit!'
                 this.form.product = product;
             },
 
@@ -107,10 +111,13 @@
                 let self = this;
                 axios.get(window.Laravel.urls.product_api_url + '?page=' + this.page)
                     .then(function (response) {
-                        console.log(response);
                         self.page = response.data.products.current_page;
-                        self.products = response.data.products.data.filter(product => product.owner_id === this.seller_id);
+                        self.products = response.data.products.data;
                         self.last_page = response.data.products.last_page;
+                        console.log(self.page )
+                        console.log(self.products )
+                        console.log(self.last_page )
+                        self.toPaginate = self.products.length > 0 ? true : false;
                     })
                     .catch(
                         () => self.updateError()

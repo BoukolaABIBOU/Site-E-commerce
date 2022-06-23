@@ -24,11 +24,13 @@ class ProductFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|alpha_spaces',
+            'title' => 'required|basic_characters',
+            'name_auteur'=> 'required|basic_characters', 
+            'edition'=> 'required|basic_characters', 
             'category' => 'required|numeric',
             'description' => 'required|basic_characters',
-            'price' => 'required|regex:/^(\d{1,8})\.(\d{2})$/',
-            'weight' => 'required|regex:/^\d*\.?\d*$/',
+            'price' => 'required|',
+            'weight' => 'required',
             'image' => 'required_without:upload|url',
             'upload' => 'required_without:image|image',
             'thumbnail' => 'url'

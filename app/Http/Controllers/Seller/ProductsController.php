@@ -52,10 +52,8 @@ class ProductsController extends AbstractSellerController
      */
     public function index()
     {
-        $seller =auth()-> user();
         return view('seller.index', [
             'table' => 'seller._includes._tables._products',
-            'seller_id'=> $seller->id
         ]);
     }
 
@@ -66,7 +64,7 @@ class ProductsController extends AbstractSellerController
      */
     public function create()
     {
-        return redirect()->action('Admin\ProductsController@index');
+        return redirect()->action('Seller\ProductsController@index');
     }
 
     /**
@@ -80,6 +78,7 @@ class ProductsController extends AbstractSellerController
         try {
             $this->processor->create($this->products, $this->image, $request);
         } catch (\Exception $exception) {
+            // return $exception;
             return $this->processingError();
         }
 
@@ -114,7 +113,7 @@ class ProductsController extends AbstractSellerController
      */
     public function edit($id)
     {
-        return redirect()->action('Admin\ProductsController@index');
+        return redirect()->action('Seller\ProductsController@index');
     }
 
     /**

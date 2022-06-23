@@ -37,6 +37,7 @@ class ProductsAPIController extends AbstractAdminController
             ->with(['sales' => function($query){
                 return $query->current();
             }])
+            ->orderByDesc('updated_at')
             ->paginate(10);
 
         return response()->json([

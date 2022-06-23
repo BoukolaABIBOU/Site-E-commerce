@@ -33,7 +33,8 @@ class HomeController extends Controller
         try {
             $products = $this->products->with(['sales' => function($query){
                 return $query->current();
-            }])->paginate(9);
+            }])->orderByDesc('updated_at')
+            ->paginate(9);
 
 
             return view('ecommerce.welcome', [

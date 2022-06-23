@@ -24,7 +24,7 @@ class ShoppingCartAdd extends AbstractShoppingCart
         $this->findTax();
         $this->setItem(
             new Item($this->product->id, $this->product->title, $this->quantity,
-                $this->product->price, $this->product->weight, true, $this->tax));
+                $this->product->price,$this->product->weight, true, $this->tax));
         $this->cart->add($this->item);
     }
 
@@ -46,6 +46,6 @@ class ShoppingCartAdd extends AbstractShoppingCart
      */
     protected function setResult()
     {
-        $this->result = "You added {$this->product->title} to your cart!";
+        $this->result = "Vous avez ajouté {$this->product->title} à votre panier!";
     }
 }

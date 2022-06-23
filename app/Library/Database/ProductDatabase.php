@@ -75,12 +75,15 @@ class ProductDatabase
     {
         return [
             'title' => self::$request['title'],
+            'name_auteur' => self::$request['name_auteur'],
+            'edition' => self::$request['edition'],
             'description' => self::$request['description'],
             'category_id' => self::$request['category'],
             'tax_id' => self::$request['tax'],
             'price' => self::$request['price'],
             'weight' => self::$request['weight'],
-            'image_id' => self::$imageID
+            'image_id' => self::$imageID,
+            'owner_id' => auth()->user()->id
         ];
     }
 }

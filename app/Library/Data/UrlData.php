@@ -31,8 +31,14 @@ class UrlData
             'category_url' => action('User\SearchController@category', ['category' => null]),
             'user_email_url' => action('Auth\RegisterValidationController@email'),
             'user_username_url' => action('Auth\RegisterValidationController@username'),
-            'product_api_url' => action('User\API\ProductsController@index'),
+            'product_api_url' => action('Seller\API\ProductsAPIController@index'),
+            'tax_api_url' => action('Seller\API\TaxesAPIController@index'),
+            'product_url' => action('Seller\ProductsController@index'),
+            'category_api_url' => action('Seller\API\CategoriesAPIController@index'),
+            'fedapay_create' => action('Payment\PaymentController@create'),
+            'fedapay_callback' => action('Payment\PaymentController@callback'),
         ];
     }
+
 }
 

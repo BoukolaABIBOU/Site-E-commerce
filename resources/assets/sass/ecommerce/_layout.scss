@@ -31,7 +31,10 @@ body {
 }
 
 .thumbnail img {
-  width: 100%;
+  max-width: 100% !important;
+  height: 15rem !important;
+  width: 100% !important;
+  object-fit: contain!important;
 }
 
 .ratings {

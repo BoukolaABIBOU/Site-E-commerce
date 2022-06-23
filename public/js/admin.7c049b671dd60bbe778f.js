@@ -3432,12 +3432,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             product: {
                 title: '',
+                name_auteur: '',
+                edition: '',
                 price: '',
                 category: '',
                 tax: '',
                 image: '',
                 description: '',
-                weight: '',
+               // weight: '',
                 upload: null,
                 thumbnail: ''
             },
@@ -3479,13 +3481,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.product = {
                 id: this.oldProduct.id,
                 title: this.oldProduct.title,
+                nane_auteur: this.oldProduct.name_auteur,
+                edition: this.oldProduct.edition,
                 price: this.oldProduct.price,
                 category: this.oldProduct.category_id,
                 tax: this.oldProduct.tax_id,
                 image: this.oldProduct.image.path,
                 thumbnail: this.oldProduct.image.thumbnail,
                 description: this.oldProduct.description,
-                weight: this.oldProduct.weight
+               // weight: this.oldProduct.weight
             };
         },
 

@@ -15,7 +15,16 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-        'category_id', 'tax_id', 'image_id', 'title', 'price', 'description', 'name_auteur', 'edition' //'weight'
+        'category_id',
+        'tax_id',
+        'image_id',
+        'title',
+        'price', 
+        'description',
+        'name_auteur',
+        'edition',
+        'weight',
+        'owner_id'
     ];
 
     /**
@@ -46,7 +55,7 @@ class Product extends Model
      */
     public function getPriceAttribute($value)
     {
-        return money_format('%i', $value);
+        return  $value;
     }
 
     /**
@@ -56,7 +65,7 @@ class Product extends Model
      */
     public function setPriceAttribute($value)
     {
-        $this->attributes['price'] = money_format('%i', $value);
+        $this->attributes['price'] = $value;
     }
 
     /**
@@ -82,6 +91,16 @@ class Product extends Model
     {
         $discount = 1 - $this->sales()->current()->first()->discount;
         return number_format($this->price * $discount, 2);
+    }
+
+        /**
+     * a product belongs to a owner
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function owner()
+    {
+        return $this->belongsTo('App\User');
     }
 
     /**

@@ -55,6 +55,11 @@ Route::resource('user/address', 'User\API\AddressController');
 //orders API
 Route::get('/order/invoice/{order}', 'User\API\OrderController@show');
 
+//payment route
+Route::post('/payment/create', 'Payment\PaymentController@create');
+Route::get('/payment/callback', 'Payment\PaymentController@callback');
+
+
 /*
 |--------------------------------------------------------------------------
 | Admin Section
@@ -118,4 +123,10 @@ Route::post('/test', function(\Illuminate\Http\Request $request){
 
 //Products
 Route::resource('seller/products', 'Seller\ProductsController');
-Route::get('seller/products-api/', 'User\API\ProductsController@index');
+Route::get('seller/products-api/', 'Seller\API\ProductsAPIController@index');
+
+Route::get('seller/taxes', 'Seller\TaxesController@index');
+
+Route::get('seller/api/taxes/all', 'Seller\API\TaxesAPIController@all');
+Route::resource('seller/api/taxes', 'Seller\API\TaxesAPIController');
+Route::resource('seller/api/categories', 'Seller\API\CategoriesAPIController');

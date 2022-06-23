@@ -31,9 +31,11 @@ class ProductsTransformer extends AbstractTransformer
         return [
             'product_id' => $model->id,
             'title' => $model->title,
+            'name_auteur' => $model->name_auteur,
+            'edition' => $model->edition,
             'price' => $model->price,
             'description' => $model->description,
-            'weight' => $model->weight,
+            //'weight' => $model->weight,
             'category' => $model->category()->first()->name,
             'image' => $model->image()->first()->path,
             'thumbnail' => $model->image()->first()->thumbnail

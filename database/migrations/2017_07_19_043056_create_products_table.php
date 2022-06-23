@@ -19,8 +19,9 @@ class CreateProductsTable extends Migration
             $table->integer('tax_id')->unsigned();
             $table->integer('image_id')->unsigned()->nullable();
             $table->string('name_auteur')->nullable();
-            $table->integer('edition')->unsigned()->nullable();
+            $table->string('edition')->nullable();
             $table->integer('owner_id')-> nullable();
+            $table->integer('weight')-> nullable();
             $table->string('title');
             $table->decimal('price');
             $table->longText('description', 500);

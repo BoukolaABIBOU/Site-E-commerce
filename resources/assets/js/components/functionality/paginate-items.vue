@@ -14,6 +14,7 @@
 
 <script>
     export default {
+        name : 'PaginateItems',
         props : ['number', 'current'],
 
         data : function() {

@@ -37,9 +37,12 @@ class ShoppingCartTransformer
     protected static function getTotal()
     {
         return [
-            'sub_total' => money_format('%.2n', CartProvider::instance()->subtotal),
-            'total' => money_format('%.2n', CartProvider::instance()->total),
-            'taxes' => money_format('%.2n', CartProvider::instance()->taxAmount),
+            // 'sub_total' => money_format('%.2n', CartProvider::instance()->subtotal),
+            // 'total' => money_format('%.2n', CartProvider::instance()->total),
+            // 'taxes' => money_format('%.2n', CartProvider::instance()->taxAmount),
+            'sub_total' => CartProvider::instance()->subtotal,
+            'total' => CartProvider::instance()->total,
+            'taxes' => CartProvider::instance()->taxAmount,
             'count' =>  CartProvider::instance()->getCartItems()->count()
         ];
     }
@@ -59,11 +62,16 @@ class ShoppingCartTransformer
                  $array[] = [
                      'id' => $item->id,
                      'title' => $item->name,
-                     'price' => money_format('%i', $item->subtotal),
-                     'taxes' => money_format('%i', $item->taxAmount),
-                     'total' => money_format('%i', $item->total),
+                     'name_auteur'=> $item->name_auteur,
+                     'edition'=> $item->edition,
+                    //  'price' => money_format('%i', $item->subtotal),
+                    //  'taxes' => money_format('%i', $item->taxAmount),
+                    //  'total' => money_format('%i', $item->total),
+                     'price' =>  $item->subtotal,
+                     'taxes' => $item->taxAmount,
+                     'total' => $item->total,
                      'quantity' => $item->quantity,
-                     'weight' => number_format($item->weight, 2),
+                     //'weight' => number_format($item->weight, 2),
                      'image' => self::getImage(Product::findOrFail($item->id))
                  ];
             }

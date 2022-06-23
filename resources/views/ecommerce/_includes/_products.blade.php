@@ -8,9 +8,9 @@
                         <a href="{{ action('User\ProductsController@show', [$product->title]) }}">{{ $product->title }}</a>
                     </h4>
                     <h4 class="{{ $product->hasSale() ? 'price-cut' : 'price-amount' }}">
-                        ${{ $product->price }}
+                        {{ $product->price }} fcfa
                         @if($product->hasSale())
-                            <span class="pull-right price-amount">{{ $product->salePrice() }} fcfa</span>
+                            <span class="pull-right price-amount">{{ $product->salePrice() }}</span>
                         @endif
                     </h4>
                     <p>{{ $product->description }}</p>

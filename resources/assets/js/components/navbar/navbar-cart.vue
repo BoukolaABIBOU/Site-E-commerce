@@ -100,7 +100,7 @@
                 if(this.cart.information.count != 1) {
                     message += 's';
                 }
-                message += ' with total of ' + this.cart.information.total + ' fcfa';
+                message += ' avec un total de ' + this.cart.information.total + ' fcfa';
                 return message;
             },
 

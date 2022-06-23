@@ -3432,12 +3432,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             product: {
                 title: '',
+                name_auteur:'',
+                edition:'',
                 price: '',
                 category: '',
                 tax: '',
                 image: '',
                 description: '',
-                weight: '',
+               // weight: '',
                 upload: null,
                 thumbnail: ''
             },

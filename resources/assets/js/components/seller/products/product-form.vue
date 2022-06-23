@@ -7,7 +7,7 @@
                     <input class="form-control"
                            type="text"
                            name="title"
-                           v-validate="'required|alpha'"
+                           v-validate="'required'"
                            v-model="product.title"
                            id="title">
                     <span class="help-block"
@@ -20,9 +20,9 @@
                 <div :class="{'form-group': true, 'has-error' : errors.has('price')}">
                     <label for="price" class="control-label">Prix: </label>
                     <input class="form-control"
-                           type="text"
+                           type="number"
                            name="price"
-                           v-validate="'required|regex:^[1-90]+.([1-90][1-90])$'"
+                           v-validate="'required'"
                            v-model="product.price"
                            id="price">
                     <span class="help-block"
@@ -33,18 +33,50 @@
             </div><!-- /.col -->
             <div class="col-sm-4">
                 <div :class="{'form-group': true, 'has-error' : errors.has('weight')}">
-                     <label for="weight" class="control-label">Weight: </label>
+                     <label for="weight" class="control-label">Poids: </label>
                      <input class="form-control"
                             id="weight"
                             name="weight"
-                            v-validate="'required|regex:^[1-90]+.([1-90]+)'"
+                            v-validate="'required|regex:^[1-90]'"
                             v-model="product.weight"
-                            type="text">
+                            type="number">
                     <span class="help-block"
                           v-show="errors.has('weight')">
                         <strong>{{ errors.first('weight') }}</strong>
                     </span>
                  </div><!-- /.form-group -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-sm-6">
+                <div :class="{'form-group': true, 'has-error' : errors.has('name_auteur')}">
+                    <label for="name_auteur" class="control-label">Nom de l'auteur: </label>
+                    <input class="form-control"
+                           type="text"
+                           name="name_auteur"
+                           v-validate="'required'"
+                           v-model="product.name_auteur"
+                           id="name_auteur">
+                    <span class="help-block"
+                          v-show="errors.has('name_auteur')">
+                        <strong>{{ errors.first('name_auteur') }}</strong>
+                    </span>
+                </div><!-- /.form-group -->
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <div :class="{'form-group': true, 'has-error' : errors.has('edition')}">
+                    <label for="edition" class="control-label">Edition: </label>
+                    <input class="form-control"
+                           type="text"
+                           name="edition"
+                           v-model="product.edition"
+                           v-validate="'required'"
+                           id="edition">
+                    <span class="help-block"
+                          v-show="errors.has('edition')">
+                        <strong>{{ errors.first('edition') }}</strong>
+                    </span>
+                </div><!-- /.form-group -->
             </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row">

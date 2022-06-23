@@ -9,7 +9,7 @@
                 <br />
                 <span class="product-title">Catégorie: </span><span class="product-details">{{ product.category }}</span>
                 <br />
-                <span class="product-title">Weight: </span><span class="product-details">{{ product.weight }}</span>
+                <span class="product-title">Taille: </span><span class="product-details">{{ product.weight }}</span>
             </div><!-- /.col -->
         </div><!-- /.row -->
         <div class="row">
