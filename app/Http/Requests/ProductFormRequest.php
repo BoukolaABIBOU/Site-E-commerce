@@ -27,8 +27,8 @@ class ProductFormRequest extends FormRequest
             'title' => 'required|alpha_spaces',
             'category' => 'required|numeric',
             'description' => 'required|basic_characters',
-            'price' => 'required|regex:/^(\d{1,8})\.(\d{2})$/',
-            'weight' => 'required|regex:/^\d*\.?\d*$/',
+            'price' => 'required',
+            'weight' => 'required',
             'image' => 'required_without:upload|url',
             'upload' => 'required_without:image|image',
             'thumbnail' => 'url'

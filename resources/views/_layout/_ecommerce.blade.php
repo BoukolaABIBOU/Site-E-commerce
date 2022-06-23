@@ -10,6 +10,7 @@
     <meta name="author" content="">
     
     <title>E-BOOK</title>
+    @yield('styles')
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
