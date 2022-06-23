@@ -36,10 +36,16 @@ class ShoppingCartTransformer
      */
     protected static function getTotal()
     {
+        // return [
+        //     'sub_total' => money_format('%.2n', CartProvider::instance()->subtotal),
+        //     'total' => money_format('%.2n', CartProvider::instance()->total),
+        //     'taxes' => money_format('%.2n', CartProvider::instance()->taxAmount),
+        //     'count' =>  CartProvider::instance()->getCartItems()->count()
+        // ];
         return [
-            'sub_total' => money_format('%.2n', CartProvider::instance()->subtotal),
-            'total' => money_format('%.2n', CartProvider::instance()->total),
-            'taxes' => money_format('%.2n', CartProvider::instance()->taxAmount),
+            'sub_total' => CartProvider::instance()->subtotal,
+            'total' => CartProvider::instance()->total,
+            'taxes' => CartProvider::instance()->taxAmount,
             'count' =>  CartProvider::instance()->getCartItems()->count()
         ];
     }
